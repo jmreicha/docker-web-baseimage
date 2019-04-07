@@ -17,4 +17,4 @@ steps:
     username:
       from_secret: DH_USER
     password:
-from_secret: DH_PASS
+      from_secret: DH_PASS
