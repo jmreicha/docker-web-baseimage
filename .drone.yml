@@ -1,0 +1,20 @@
+---
+kind: pipeline
+name: default
+
+platform:
+  os: linux
+  arch: arm64
+
+steps:
+- name: publish_image
+  image: plugins/docker
+  settings:
+    repo: jmreicha/web-baseimage
+    tags: 1.1.1-arm64
+    dockerfile: image/Dockerfile
+    context: image
+    username:
+      from_secret: DH_USER
+    password:
+from_secret: DH_PASS
